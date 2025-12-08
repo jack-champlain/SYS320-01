@@ -4,9 +4,17 @@ myIP=$(bash myIP.bash)
 
 # Todo-1: Create a helpmenu function that prints help for the script
 function helpmenu(){
-  echo "Usage: $0 -n|-s [internal|external]"
-  echo "  -n internal/external    Scan with nmap"
-  echo "  -s internal/external    List ports with ss"
+  echo "HELP MENU"
+  echo "--------------"
+  echo "-n: Add -n as an argument for this script to use nmap"
+  echo "-n external: External NMAP scan"
+  echo "-n internal: Internal NMAP scan"
+  echo "-s: Add -s as an argument for this script to use ss"
+  echo "-s external: External ss(Netstat) scan"
+  echo "-s internal: Internal ss(Netstat) scan"
+  echo ""
+  echo "Usage: bash networkchecker.bash -n/-s external/internal"
+  echo "--------------"
 }
 
 # Return ports that are serving to the network
